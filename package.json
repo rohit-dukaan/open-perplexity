@@ -1,0 +1,43 @@
+{
+    "name": "open-perplexity",
+    "version": "0.0.1",
+    "description": "Open-source AI chatbot for conversational search, basically a Perplexity killer",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky || true",
+        "format": "npx prettier --write \"src/**/*.js\"",
+        "lint": "npx eslint --fix \"src/**/*.js\"",
+        "circ-deps": "npx madge . -c"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rohit-dukaan/open-perplexity.git"
+    },
+    "keywords": [
+        "conversational-search",
+        "ai"
+    ],
+    "author": "Rohit Kumar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rohit-dukaan/open-perplexity/issues"
+    },
+    "homepage": "https://github.com/rohit-dukaan/open-perplexity#readme",
+    "lint-staged": {
+        "src/**/*.js": [
+            "npx madge . -c",
+            "npx eslint --fix",
+            "npx prettier --write"
+        ]
+    },
+    "devDependencies": {
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
+        "madge": "^7.0.0",
+        "prettier": "^3.2.5"
+    }
+}
